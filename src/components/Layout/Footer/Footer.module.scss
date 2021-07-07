@@ -1,0 +1,15 @@
+.footer {
+	background-color: var(--color-black);
+	color: var(--color-white);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	height: 209px;
+
+	& > svg {
+		margin-top: 50px;
+		color: var(--color-white);
+		height: 40px;
+	}
+}
