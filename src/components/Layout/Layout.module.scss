@@ -3,4 +3,26 @@
 	flex-direction: column;
 	min-height: 100vh;
 	justify-content: space-between;
+
+	& .main {
+		padding: 40px 75px;
+	}
+}
+
+@media (max-width: 950px) {
+	.layout {
+
+		& .main {
+			padding: 0 20px;
+		}
+	}
+}
+
+@media (max-width: 360px) {
+	.layout {
+
+		& .main {
+			padding: 0;
+		}
+	}
 }

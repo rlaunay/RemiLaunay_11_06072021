@@ -1,19 +1,20 @@
 import React from 'react'
 
-import LodgmentList from '../components/LodgmentList/LodgmentList'
+import LogementList from '../components/LogementList/LogementList'
+import Hero from "../components/Hero/Hero";
 
-import api from './../mocks/api'
+import api from '../mocks/api'
 
 
 class Home extends React.Component {
     state = {
-        lodgments: [],
+        logements: [],
         error: null
     }
 
     componentDidMount() {
         api.getAll().then(res => {
-            this.setState({ lodgments: res, error: null })
+            this.setState({ logements: res, error: null })
         }).catch(err => {
             this.setState({ error: err })
         })
@@ -21,10 +22,10 @@ class Home extends React.Component {
 
     render() {
         return (
-            <div>
-                <h1>Home</h1>
-                <LodgmentList lodgments={this.state.lodgments} />
-            </div>
+            <React.Fragment>
+                <Hero />
+                <LogementList lodgments={this.state.logements} />
+            </React.Fragment>
         )
     }
 }
