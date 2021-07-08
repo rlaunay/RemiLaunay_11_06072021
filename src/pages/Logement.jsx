@@ -2,12 +2,12 @@ import React from 'react'
 
 import { withRouter } from 'react-router-dom'
 
-class Lodgment extends React.Component {
+class Logement extends React.Component {
     render() {
         console.log(this.props)
         return (
-            <h1>Lodgment {this.props.match.params.id}</h1>
+            <h1>Logement {this.props.match.params.id}</h1>
         )
     }
 }
-export default withRouter(Lodgment)
+export default withRouter(Logement)
