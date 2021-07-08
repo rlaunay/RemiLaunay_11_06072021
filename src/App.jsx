@@ -3,7 +3,7 @@ import { Switch, Route } from 'react-router-dom';
 
 import Layout from './components/Layout/Layout';
 import Home from './pages/Home';
-import Lodgment from './pages/Lodgment';
+import Logement from './pages/Logement';
 import About from './pages/About';
 import NotFound from './pages/NotFound';
 
@@ -15,8 +15,8 @@ class App extends React.Component {
                     <Route exact path='/' >
                         <Home/>
                     </Route>
-                    <Route path='/lodgment/:id' >
-                        <Lodgment/>
+                    <Route path='/logement/:id' >
+                        <Logement/>
                     </Route>
                     <Route path='/about' >
                         <About/>

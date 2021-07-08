@@ -1,0 +1,52 @@
+.card {
+  position: relative;
+  height: 340px;
+  width: 340px;
+  border-radius: 10px;
+  overflow: hidden;
+
+  transition: all .3s;
+
+  & > img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  & > h1 {
+    position: absolute;
+    right: 20px;
+    left: 20px;
+    bottom: 20px;
+    color: var(--color-white);
+    font-weight: 500;
+  }
+
+  & .link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+  }
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  }
+}
+
+@media (max-width: 950px) {
+	.card {
+      height: 255px;
+      width: 335px;
+    }
+}
+
+@media (max-width: 340px) {
+	.card {
+      height: 225px;
+      width: 300px;
+    }
+}
