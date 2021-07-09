@@ -1,4 +1,4 @@
-const lodgments = [
+const logements = [
     {
         "id": "c67ab8a7",
         "title": "Appartement cosy",
@@ -620,11 +620,19 @@ const lodgments = [
 
 const api = {
     getAll() {
-        return Promise.resolve(lodgments)
+        return new Promise((resolve => {
+            setTimeout(() => {
+                resolve(logements)
+            },500)
+        }))
     },
     getOne(id) {
-        const lodgment = lodgments.find(lod => lod.id === id)
-        return Promise.resolve(lodgment)
+        const logement = logements.find(lod => lod.id === id)
+        return new Promise((resolve => {
+            setTimeout(() => {
+                resolve(logement)
+            },500)
+        }))
     }
 }
 
