@@ -27,7 +27,7 @@ class Home extends React.Component {
         return (
             <React.Fragment>
                 <Hero url={imgUrl}>Chez vous, partout et ailleurs</Hero>
-                {!this.state.isLoading && <LogementList error={this.props.error} lodgments={this.state.logements}/>}
+                {!this.state.isLoading && <LogementList error={this.state.error} lodgments={this.state.logements}/>}
                 {this.state.isLoading && <Loader />}
             </React.Fragment>
         )

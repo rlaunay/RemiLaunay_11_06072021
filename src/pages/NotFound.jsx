@@ -8,8 +8,8 @@ class NotFound extends React.Component {
     render() {
         return (
             <React.Fragment>
-                <H1>404</H1>
-                <H2>Oups! La page que vous demandez n'existe pas.</H2>
+                <H1 center>404</H1>
+                <H2 center>Oups! La page que vous demandez n'existe pas.</H2>
                 <StyledLink to="/" >Retourner sur la page d’accueil</StyledLink>
             </React.Fragment>
         )
