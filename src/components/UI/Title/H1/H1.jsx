@@ -4,7 +4,8 @@ import classes from './H1.module.scss'
 
 class H1 extends React.Component {
     render() {
-        return <h1 className={classes.h1}>{this.props.children}</h1>
+        const classNames = this.props.center ? `${classes.h1} ${classes.center}` : classes.h1
+        return <h1 className={classNames}>{this.props.children}</h1>
     }
 }
 

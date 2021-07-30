@@ -1,0 +1,19 @@
+.rating {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+
+  & svg {
+    height: 30px;
+    width: 30px;
+  }
+}
+
+@media (max-width: 850px) {
+  .rating {
+    & svg {
+      height: 15px;
+      width: 15px;
+    }
+  }
+}

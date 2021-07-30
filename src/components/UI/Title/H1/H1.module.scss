@@ -2,8 +2,11 @@
     font-size: 288px;
     font-weight: 700;
     color: var(--color-primary);
-    text-align: center;
     margin: 0;
+}
+
+.center {
+    text-align: center;
 }
 
 @media (max-width: 900px) {
