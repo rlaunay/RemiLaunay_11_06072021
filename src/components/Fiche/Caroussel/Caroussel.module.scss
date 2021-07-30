@@ -43,9 +43,11 @@
 @media (max-width: 850px) {
   .caroussel {
     height: 255px;
+    border-radius: 10px;
 
     & img {
       height: 255px;
+      border-radius: 10px;
     }
 
     & .button {
