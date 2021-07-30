@@ -1,9 +1,13 @@
 import React from 'react'
 import {Redirect} from "react-router-dom";
 import H2 from "../UI/Title/H2/H2";
-import Row from "../UI/Row/Row";
 import Dropdown from "../UI/Dropdown/Dropdown";
 import Tags from './Tags/Tags'
+import Caroussel from "./Caroussel/Caroussel";
+
+import classes from './Fiche.module.scss'
+import Host from "./Host/Host";
+import Rating from "./Rating/Rating";
 
 class Fiche extends React.Component {
     render() {
@@ -12,18 +16,22 @@ class Fiche extends React.Component {
         console.log(logement)
         return (
             <React.Fragment>
-                <Row>
-                    <div>
+                <Caroussel images={logement.pictures} />
+                <div className={classes.row1}>
+                    <div className={classes.col}>
                         <H2>{logement.title}</H2>
-                        <span>{logement.location}</span>
+                        <span className={classes.location}>{logement.location}</span>
                         <Tags tags={logement.tags} />
                     </div>
-                    <div></div>
-                </Row>
-                <Row>
+                    <div className={`${classes.col} ${classes.host_rate}`}>
+                        <Host host={logement.host} />
+                        <Rating rating={+logement.rating} />
+                    </div>
+                </div>
+                <div className={classes.row2}>
                     <Dropdown title="Description">{logement.description}</Dropdown>
                     <Dropdown title="Équipements">{logement.equipments}</Dropdown>
-                </Row>
+                </div>
             </React.Fragment>
         )
     }
