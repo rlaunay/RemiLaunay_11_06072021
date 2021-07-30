@@ -1,0 +1,25 @@
+.tag {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  height: 25px;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 25px;
+  margin: 0 2px;
+
+  &:first-child {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 850px) {
+  .tag {
+    height: 18px;
+    font-size: 10px;
+    margin: 2px;
+  }
+}
