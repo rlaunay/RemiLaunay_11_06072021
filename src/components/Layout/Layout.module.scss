@@ -24,7 +24,16 @@
 	.layout {
 
 		& .main {
-			padding: 0;
+			padding: 0 10px;
+		}
+	}
+}
+
+@media (max-width: 330px) {
+	.layout {
+
+		& .main {
+			padding: 0 5px;
 		}
 	}
 }

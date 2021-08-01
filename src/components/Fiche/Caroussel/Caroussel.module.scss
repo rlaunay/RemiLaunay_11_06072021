@@ -56,6 +56,14 @@
       & svg {
         height: 20px;
       }
+
+      &.left {
+        left: 5px;
+      }
+
+      &.right {
+        right: 5px;
+      }
     }
   }
 }

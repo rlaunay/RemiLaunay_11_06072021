@@ -13,7 +13,6 @@ class Fiche extends React.Component {
     render() {
         const logement = this.props.logement
         if (logement === undefined) return <Redirect to='/not-found' />
-        console.log(logement)
         return (
             <React.Fragment>
                 <Caroussel images={logement.pictures} />
